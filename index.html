@@ -1,24 +1,451 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laryssa & José — Cerimônia</title>
+
+    <title>Laryssa & José — Painel da Cantora</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Laryssa & José</h1>
+    <main class="pagina">
 
-    <p>Cerimônia de Casamento</p>
-    <p>31 de outubro de 2026</p>
+        <!-- =========================================
+             CAPA
+        ========================================== -->
 
-    <hr>
+        <section class="capa" id="tela-inicial">
 
-    <h2>Painel da Cantora</h2>
+            <div class="conteudo-capa">
 
-    <p>Repertório musical da cerimônia</p>
+                <p class="data">
+                    <span class="dia">31</span> de outubro de 2026
+                </p>
+
+                <h1>
+                    <span class="nome">Laryssa</span>
+                    <span class="e-comercial">&amp;</span>
+                    <span class="nome">José</span>
+                </h1>
+
+                <div class="linha"></div>
+
+                <p class="subtitulo">
+                    PAINEL DA CANTORA
+                </p>
+
+                <p class="descricao">
+                    Cerimônia de Casamento
+                </p>
+
+                <div class="menu">
+
+                    <!-- PROGRAMÇÃO -->
+
+                    <button class="botao" id="btn-programacao">
+                        <span class="icone">♪</span>
+
+                        <span>
+                            <strong>Programação</strong>
+                            <small>Ordem da cerimônia</small>
+                        </span>
+                    </button>
+
+
+                    <!-- PLAYLIST -->
+
+                    <button class="botao" id="btn-playlist">
+                        <span class="icone">♫</span>
+
+                        <span>
+                            <strong>Playlist de Ensaio</strong>
+                            <small>Ouvir as músicas</small>
+                        </span>
+                    </button>
+
+
+                    <!-- MODO CERIMÔNIA -->
+
+                    <div class="modo-cerimonia-area">
+
+                        <p class="modo-legenda">
+                            NO DIA DO CASAMENTO
+                        </p>
+
+                        <button class="botao modo-cerimonia" id="btn-cerimonia">
+
+                            <span class="icone">♩</span>
+
+                            <span class="texto-botao">
+                                <strong>Modo Cerimônia</strong>
+                                <small>Acompanhar a cerimônia em tempo real</small>
+                            </span>
+
+                            <span class="seta">→</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             TELA DE PROGRAMAÇÃO
+        ========================================== -->
+
+        <section class="tela-programacao" id="tela-programacao">
+
+            <div class="conteudo-programacao">
+
+                <!-- CABEÇALHO -->
+
+                <header class="cabecalho-programacao">
+
+                    <button class="voltar" id="btn-voltar">
+                        ← Voltar
+                    </button>
+
+                    <p class="subtitulo">
+                        PROGRAMAÇÃO
+                    </p>
+
+                    <p class="descricao">
+                        Cerimônia de Casamento
+                    </p>
+
+                    <div class="linha"></div>
+
+                </header>
+
+
+                <!-- LISTA DA CERIMÔNIA -->
+
+                <div class="lista-programacao">
+
+
+                    <!-- 01 -->
+
+                    <article class="item-programacao">
+
+                        <span class="numero-programacao">
+                            01
+                        </span>
+
+                        <div class="informacoes-programacao">
+
+                            <h2>
+                                Entrada da Bíblia
+                            </h2>
+
+                            <p class="musica">
+                                Deus Está Aqui
+                            </p>
+
+                            <span class="trecho">
+                                1º verso
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 02 -->
+
+                    <article class="item-programacao">
+
+                        <span class="numero-programacao">
+                            02
+                        </span>
+
+                        <div class="informacoes-programacao">
+
+                            <h2>
+                                Entrada dos Padrinhos
+                            </h2>
+
+                            <p class="musica">
+                                Me Ama
+                            </p>
+
+                            <span class="trecho">
+                                1ª parte + 1ª parte do refrão
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 03 -->
+
+                    <article class="item-programacao">
+
+                        <span class="numero-programacao">
+                            03
+                        </span>
+
+                        <div class="informacoes-programacao">
+
+                            <h2>
+                                Entrada do Noivo
+                            </h2>
+
+                            <p class="musica">
+                                Só Tu És Santo
+                            </p>
+
+                            <span class="trecho">
+                                1º verso + pré-refrão
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 04 -->
+
+                    <article class="item-programacao">
+
+                        <span class="numero-programacao">
+                            04
+                        </span>
+
+                        <div class="informacoes-programacao">
+
+                            <h2>
+                                Entrada das Damas e Pajens
+                            </h2>
+
+                            <p class="musica">
+                                Amor do Nosso Deus
+                            </p>
+
+                            <span class="trecho">
+                                1ª parte + pré-refrão
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 05 -->
+
+                    <article class="item-programacao destaque">
+
+                        <span class="numero-programacao">
+                            05
+                        </span>
+
+                        <div class="informacoes-programacao">
+
+                            <h2>
+                                Entrada da Noiva
+                            </h2>
+
+                            <p class="musica">
+                                Marcha Nupcial + Pra Ti Eu Vou
+                            </p>
+
+                            <span class="trecho">
+                                Ponte + refrão
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 06 -->
+
+                    <article class="item-programacao">
+
+                        <span class="numero-programacao">
+                            06
+                        </span>
+
+                        <div class="informacoes-programacao">
+
+                            <h2>
+                                Momento de Louvor
+                            </h2>
+
+                            <p class="musica">
+                                Medley — Consagração + Pra Te Adorar
+                            </p>
+
+                            <span class="trecho">
+                                Arranjo original
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 07 -->
+
+                    <article class="item-programacao">
+
+                        <span class="numero-programacao">
+                            07
+                        </span>
+
+                        <div class="informacoes-programacao">
+
+                            <h2>
+                                Entrada das Alianças
+                            </h2>
+
+                            <p class="musica">
+                                Tu És
+                            </p>
+
+                            <span class="trecho">
+                                Refrão
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 08 -->
+
+                    <article class="item-programacao">
+
+                        <span class="numero-programacao">
+                            08
+                        </span>
+
+                        <div class="informacoes-programacao">
+
+                            <h2>
+                                Votos
+                            </h2>
+
+                            <p class="musica">
+                                A Thousand Years
+                            </p>
+
+                            <span class="trecho">
+                                Instrumental completa
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 09 -->
+
+                    <article class="item-programacao destaque">
+
+                        <span class="numero-programacao">
+                            09
+                        </span>
+
+                        <div class="informacoes-programacao">
+
+                            <h2>
+                                Momento do Beijo
+                            </h2>
+
+                            <p class="musica">
+                                Nós Dois
+                            </p>
+
+                            <span class="trecho">
+                                Refrão
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 10 -->
+
+                    <article class="item-programacao">
+
+                        <span class="numero-programacao">
+                            10
+                        </span>
+
+                        <div class="informacoes-programacao">
+
+                            <h2>
+                                Assinaturas
+                            </h2>
+
+                            <p class="musica">
+                                Casa de Benção
+                            </p>
+
+                            <span class="trecho">
+                                Refrão
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 11 -->
+
+                    <article class="item-programacao destaque">
+
+                        <span class="numero-programacao">
+                            11
+                        </span>
+
+                        <div class="informacoes-programacao">
+
+                            <h2>
+                                Saída
+                            </h2>
+
+                            <p class="musica">
+                                Te Agradeço — Preto no Branco
+                            </p>
+
+                            <span class="trecho">
+                                Refrão
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- RODAPÉ -->
+
+                <footer class="rodape-programacao">
+                    Laryssa &amp; José
+                </footer>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>

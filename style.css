@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Great+Vibes&family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Great+Vibes&family=Parisienne&family=Playfair+Display:wght@400;500;600&display=swap");
+
 
 /* =========================================
    PALETA DO CASAMENTO
@@ -12,6 +13,7 @@
     --texto: #263326;
 }
 
+
 /* =========================================
    RESET
 ========================================= */
@@ -21,6 +23,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 
 /* =========================================
    BASE
@@ -34,6 +37,7 @@ body {
 
 body {
     min-height: 100vh;
+
     color: var(--texto);
 
     background-image:
@@ -49,8 +53,10 @@ body {
     background-attachment: fixed;
 
     font-family: "Cormorant Garamond", serif;
+
     overflow-x: hidden;
 }
+
 
 /* =========================================
    PÁGINA
@@ -61,17 +67,21 @@ body {
     min-height: 100vh;
 }
 
+
 /* =========================================
    CAPA
 ========================================= */
 
 .capa {
     min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding: 35px 18px;
 }
+
 
 /* =========================================
    PAINEL CENTRAL
@@ -80,6 +90,7 @@ body {
 .conteudo-capa {
     width: 100%;
     max-width: 520px;
+
     padding: 48px 32px 42px;
 
     text-align: center;
@@ -94,18 +105,35 @@ body {
     backdrop-filter: blur(4px);
 }
 
+
 /* =========================================
    DATA
 ========================================= */
 
 .data {
     font-family: "Cormorant Garamond", serif;
+
     font-size: 16px;
     font-weight: 500;
+
     letter-spacing: 1.5px;
+
     color: var(--verde);
+
     margin-bottom: 18px;
 }
+
+.data .dia {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.05em;
+    font-weight: 500;
+
+    letter-spacing: 0;
+
+    color: var(--verde);
+}
+
 
 /* =========================================
    NOMES
@@ -113,13 +141,18 @@ body {
 
 h1 {
     display: flex;
+
     align-items: baseline;
     justify-content: center;
+
     gap: 12px;
 
     font-family: "Parisienne", cursive;
+
     font-size: clamp(52px, 11vw, 76px);
+
     font-weight: 400;
+
     line-height: 1;
 
     color: var(--verde);
@@ -128,11 +161,13 @@ h1 {
         0 2px 3px rgba(0, 0, 0, 0.18);
 }
 
+
 /* Nome individual */
 
 h1 .nome {
     display: inline;
 }
+
 
 /* E comercial */
 
@@ -140,13 +175,17 @@ h1 .e-comercial {
     display: inline;
 
     font-family: "Cormorant Garamond", serif;
+
     font-size: 30px;
+
     font-style: italic;
     font-weight: 500;
 
     color: var(--dourado);
+
     margin: 0;
 }
+
 
 /* Compatibilidade caso o span antigo ainda esteja no HTML */
 
@@ -154,11 +193,14 @@ h1 > span:not(.nome):not(.e-comercial) {
     margin: 0;
 
     font-family: "Cormorant Garamond", serif;
+
     font-size: 30px;
+
     font-style: italic;
 
     color: var(--dourado);
 }
+
 
 /* =========================================
    LINHA DECORATIVA
@@ -180,9 +222,11 @@ h1 > span:not(.nome):not(.e-comercial) {
     content: "❦";
 
     position: absolute;
+
     top: 50%;
 
     font-family: "Cormorant Garamond", serif;
+
     font-size: 13px;
 
     color: var(--dourado);
@@ -200,14 +244,17 @@ h1 > span:not(.nome):not(.e-comercial) {
     margin-left: 7px;
 }
 
+
 /* =========================================
    TÍTULO DO PAINEL
 ========================================= */
 
 .subtitulo {
     font-family: "Cormorant Garamond", serif;
+
     font-size: 16px;
     font-weight: 600;
+
     letter-spacing: 4px;
 
     color: var(--verde);
@@ -215,12 +262,14 @@ h1 > span:not(.nome):not(.e-comercial) {
     margin-bottom: 8px;
 }
 
+
 /* =========================================
    TEXTO DECORATIVO
 ========================================= */
 
 .descricao {
     font-family: "Great Vibes", cursive;
+
     font-size: 25px;
 
     color: #c49b58;
@@ -231,15 +280,19 @@ h1 > span:not(.nome):not(.e-comercial) {
     margin-bottom: 36px;
 }
 
+
 /* =========================================
    MENU
 ========================================= */
 
 .menu {
     display: flex;
+
     flex-direction: column;
+
     gap: 13px;
 }
+
 
 /* =========================================
    BOTÕES
@@ -271,6 +324,7 @@ h1 > span:not(.nome):not(.e-comercial) {
         box-shadow 0.25s ease;
 }
 
+
 /* Efeito ao passar o mouse */
 
 .botao:hover {
@@ -281,6 +335,7 @@ h1 > span:not(.nome):not(.e-comercial) {
     box-shadow:
         0 8px 20px rgba(0, 0, 0, 0.10);
 }
+
 
 /* =========================================
    ÍCONES
@@ -308,6 +363,7 @@ h1 > span:not(.nome):not(.e-comercial) {
     font-size: 20px;
 }
 
+
 /* =========================================
    TEXTO PRINCIPAL DOS BOTÕES
 ========================================= */
@@ -316,6 +372,7 @@ h1 > span:not(.nome):not(.e-comercial) {
     display: block;
 
     font-family: "Cormorant Garamond", serif;
+
     font-size: 17px;
     font-weight: 600;
 
@@ -323,6 +380,7 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     margin-bottom: 2px;
 }
+
 
 /* =========================================
    SUBTÍTULO DOS BOTÕES
@@ -332,6 +390,7 @@ h1 > span:not(.nome):not(.e-comercial) {
     display: block;
 
     font-family: "Cormorant Garamond", serif;
+
     font-size: 13px;
     font-weight: 500;
 
@@ -342,6 +401,7 @@ h1 > span:not(.nome):not(.e-comercial) {
     letter-spacing: 0.2px;
 }
 
+
 /* =========================================
    RODAPÉ
 ========================================= */
@@ -350,6 +410,7 @@ h1 > span:not(.nome):not(.e-comercial) {
     margin-top: 28px;
 
     font-family: "Great Vibes", cursive;
+
     font-size: 20px;
 
     color: var(--dourado);
@@ -357,26 +418,32 @@ h1 > span:not(.nome):not(.e-comercial) {
     opacity: 0.90;
 }
 
+
 /* =========================================
    MODO CERIMÔNIA — BOTÃO PRINCIPAL
 ========================================= */
 
 .modo-cerimonia-area {
     margin-top: 30px;
+
     text-align: center;
 }
 
 .modo-legenda {
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: 11px;
+
+    font-size: 13px;
     font-weight: 600;
 
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
 
-    color: var(--dourado);
+    color: var(--verde);
+
+    text-transform: uppercase;
 }
+
 
 /* Botão principal */
 
@@ -402,6 +469,7 @@ h1 > span:not(.nome):not(.e-comercial) {
         box-shadow 0.25s ease;
 }
 
+
 /* Ícone do Modo Cerimônia */
 
 .botao.modo-cerimonia .icone {
@@ -416,6 +484,7 @@ h1 > span:not(.nome):not(.e-comercial) {
         0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
+
 /* Título */
 
 .botao.modo-cerimonia strong {
@@ -427,6 +496,7 @@ h1 > span:not(.nome):not(.e-comercial) {
         0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
+
 /* Subtítulo */
 
 .botao.modo-cerimonia small {
@@ -437,12 +507,14 @@ h1 > span:not(.nome):not(.e-comercial) {
     font-size: 13px;
 }
 
+
 /* Seta */
 
 .botao.modo-cerimonia .seta {
     margin-left: auto;
 
     font-family: "Cormorant Garamond", serif;
+
     font-size: 27px;
 
     color: #d2ad69;
@@ -453,6 +525,7 @@ h1 > span:not(.nome):not(.e-comercial) {
     transition:
         transform 0.25s ease;
 }
+
 
 /* Hover */
 
@@ -468,6 +541,7 @@ h1 > span:not(.nome):not(.e-comercial) {
 .botao.modo-cerimonia:hover .seta {
     transform: translateX(4px);
 }
+
 
 /* =========================================
    AJUSTE DO MENU
@@ -492,8 +566,9 @@ h1 > span:not(.nome):not(.e-comercial) {
     opacity: 0.65;
 }
 
+
 /* =========================================
-   CELULAR
+   CELULAR — CAPA
 ========================================= */
 
 @media (max-width: 600px) {
@@ -508,12 +583,19 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     .data {
         font-size: 14px;
+
         letter-spacing: 1px;
+
         margin-bottom: 16px;
+    }
+
+    .data .dia {
+        font-size: 1.05em;
     }
 
     h1 {
         gap: 8px;
+
         font-size: 58px;
     }
 
@@ -527,6 +609,7 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     .subtitulo {
         font-size: 14px;
+
         letter-spacing: 3px;
     }
 
@@ -552,11 +635,13 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     .modo-legenda {
         font-size: 10px;
+
         letter-spacing: 2.5px;
     }
 
     .botao.modo-cerimonia {
         min-height: 74px;
+
         padding: 15px;
     }
 
@@ -567,4 +652,355 @@ h1 > span:not(.nome):not(.e-comercial) {
     .botao.modo-cerimonia small {
         font-size: 12px;
     }
+}
+
+
+/* =========================================
+   TELA DE PROGRAMAÇÃO
+========================================= */
+
+.tela-programacao {
+    display: none;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 35px 18px;
+}
+
+.conteudo-programacao {
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 38px 30px 35px;
+
+    background: rgba(255, 248, 231, 0.93);
+
+    border: 1px solid rgba(182, 144, 82, 0.40);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.18);
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* =========================================
+   CABEÇALHO DA PROGRAMAÇÃO
+========================================= */
+
+.cabecalho-programacao {
+    text-align: center;
+}
+
+.voltar {
+    display: block;
+
+    margin: 0 auto 30px;
+
+    padding: 7px 14px;
+
+    background: transparent;
+
+    border: none;
+
+    color: var(--verde);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.voltar:hover {
+    color: var(--dourado);
+
+    transform: translateX(-3px);
+}
+
+
+/* =========================================
+   LISTA DA CERIMÔNIA
+========================================= */
+
+.lista-programacao {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+/* =========================================
+   ITEM DA PROGRAMAÇÃO
+========================================= */
+
+.item-programacao {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 19px;
+
+    padding: 19px 18px;
+
+    background: rgba(255, 248, 231, 0.96);
+
+    border: 1px solid rgba(182, 144, 82, 0.38);
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.item-programacao:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   NÚMERO
+========================================= */
+
+.numero-programacao {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(182, 144, 82, 0.70);
+
+    background: rgba(255, 248, 231, 0.80);
+
+    color: var(--dourado);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+.informacoes-programacao {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   MOMENTO DA CERIMÔNIA
+========================================= */
+
+.informacoes-programacao h2 {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    padding: 5px 10px;
+
+    background: rgba(0, 52, 0, 0.07);
+
+    color: var(--verde);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    letter-spacing: 1.6px;
+
+    line-height: 1.15;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   NOME DA MÚSICA
+========================================= */
+
+.informacoes-programacao .musica {
+    margin-bottom: 9px;
+
+    color: var(--verde);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+    font-weight: 500;
+
+    line-height: 1.15;
+}
+
+
+/* =========================================
+   TRECHO DA MÚSICA
+========================================= */
+
+.informacoes-programacao .trecho {
+    display: inline-block;
+
+    padding: 4px 10px;
+
+    background: rgba(182, 144, 82, 0.12);
+
+    border: 1px solid rgba(182, 144, 82, 0.30);
+
+    color: var(--verde);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    font-style: italic;
+
+    letter-spacing: 0.3px;
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   MOMENTOS DE DESTAQUE
+========================================= */
+
+.item-programacao.destaque {
+    border-color: rgba(182, 144, 82, 0.55);
+
+    background: rgba(255, 248, 231, 0.98);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   RODAPÉ DA PROGRAMAÇÃO
+========================================= */
+
+.rodape-programacao {
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: var(--dourado);
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 22px;
+}
+
+
+/* =========================================
+   PROGRAMAÇÃO — CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .tela-programacao {
+        padding: 18px 12px;
+    }
+
+    .conteudo-programacao {
+        padding: 30px 18px 28px;
+    }
+
+    .voltar {
+        margin-bottom: 25px;
+    }
+
+    .lista-programacao {
+        gap: 10px;
+    }
+
+    .item-programacao {
+        gap: 12px;
+
+        padding: 15px 12px;
+    }
+
+    .numero-programacao {
+        width: 34px;
+        height: 34px;
+
+        font-size: 15px;
+
+        letter-spacing: 0.5px;
+    }
+
+    .informacoes-programacao h2 {
+        margin-bottom: 6px;
+
+        padding: 4px 8px;
+
+        font-size: 16px;
+
+        letter-spacing: 0.9px;
+
+        line-height: 1.15;
+    }
+
+    .informacoes-programacao .musica {
+        margin-bottom: 7px;
+
+        font-size: 18px;
+
+        line-height: 1.15;
+    }
+
+    .informacoes-programacao .trecho {
+        padding: 3px 8px;
+
+        font-size: 12.5px;
+    }
+}
+
+/* =========================================
+   TRANSIÇÃO ENTRE TELAS
+========================================= */
+
+.capa,
+.tela-programacao {
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+/* =========================================
+   ENTRADA INICIAL DA PÁGINA
+========================================= */
+
+.capa.inicializando {
+    opacity: 0;
+    transform: translateY(10px);
 }
