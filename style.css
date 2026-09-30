@@ -80,6 +80,15 @@ body {
     justify-content: center;
 
     padding: 35px 18px;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+.capa.inicializando {
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 
@@ -161,15 +170,9 @@ h1 {
         0 2px 3px rgba(0, 0, 0, 0.18);
 }
 
-
-/* Nome individual */
-
 h1 .nome {
     display: inline;
 }
-
-
-/* E comercial */
 
 h1 .e-comercial {
     display: inline;
@@ -185,9 +188,6 @@ h1 .e-comercial {
 
     margin: 0;
 }
-
-
-/* Compatibilidade caso o span antigo ainda esteja no HTML */
 
 h1 > span:not(.nome):not(.e-comercial) {
     margin: 0;
@@ -324,9 +324,6 @@ h1 > span:not(.nome):not(.e-comercial) {
         box-shadow 0.25s ease;
 }
 
-
-/* Efeito ao passar o mouse */
-
 .botao:hover {
     background: rgba(255, 255, 255, 0.96);
 
@@ -365,7 +362,7 @@ h1 > span:not(.nome):not(.e-comercial) {
 
 
 /* =========================================
-   TEXTO PRINCIPAL DOS BOTÕES
+   TEXTO DOS BOTÕES
 ========================================= */
 
 .botao strong {
@@ -380,11 +377,6 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     margin-bottom: 2px;
 }
-
-
-/* =========================================
-   SUBTÍTULO DOS BOTÕES
-========================================= */
 
 .botao small {
     display: block;
@@ -424,9 +416,26 @@ h1 > span:not(.nome):not(.e-comercial) {
 ========================================= */
 
 .modo-cerimonia-area {
+    position: relative;
+
     margin-top: 30px;
 
     text-align: center;
+}
+
+.modo-cerimonia-area::before {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 1px;
+
+    margin: 0 auto 12px;
+
+    background: var(--dourado);
+
+    opacity: 0.65;
 }
 
 .modo-legenda {
@@ -443,9 +452,6 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     text-transform: uppercase;
 }
-
-
-/* Botão principal */
 
 .botao.modo-cerimonia {
     position: relative;
@@ -469,9 +475,6 @@ h1 > span:not(.nome):not(.e-comercial) {
         box-shadow 0.25s ease;
 }
 
-
-/* Ícone do Modo Cerimônia */
-
 .botao.modo-cerimonia .icone {
     border-color: rgba(210, 173, 105, 0.85);
 
@@ -484,9 +487,6 @@ h1 > span:not(.nome):not(.e-comercial) {
         0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
-
-/* Título */
-
 .botao.modo-cerimonia strong {
     color: var(--creme);
 
@@ -496,9 +496,6 @@ h1 > span:not(.nome):not(.e-comercial) {
         0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
-
-/* Subtítulo */
-
 .botao.modo-cerimonia small {
     color: var(--creme);
 
@@ -506,9 +503,6 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     font-size: 13px;
 }
-
-
-/* Seta */
 
 .botao.modo-cerimonia .seta {
     margin-left: auto;
@@ -526,9 +520,6 @@ h1 > span:not(.nome):not(.e-comercial) {
         transform 0.25s ease;
 }
 
-
-/* Hover */
-
 .botao.modo-cerimonia:hover {
     background: #004700;
 
@@ -544,31 +535,7 @@ h1 > span:not(.nome):not(.e-comercial) {
 
 
 /* =========================================
-   AJUSTE DO MENU
-========================================= */
-
-.modo-cerimonia-area {
-    position: relative;
-}
-
-.modo-cerimonia-area::before {
-    content: "";
-
-    display: block;
-
-    width: 55px;
-    height: 1px;
-
-    margin: 0 auto 12px;
-
-    background: var(--dourado);
-
-    opacity: 0.65;
-}
-
-
-/* =========================================
-   CELULAR — CAPA
+   CAPA — CELULAR
 ========================================= */
 
 @media (max-width: 600px) {
@@ -583,9 +550,7 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     .data {
         font-size: 14px;
-
         letter-spacing: 1px;
-
         margin-bottom: 16px;
     }
 
@@ -595,7 +560,6 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     h1 {
         gap: 8px;
-
         font-size: 58px;
     }
 
@@ -609,7 +573,6 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     .subtitulo {
         font-size: 14px;
-
         letter-spacing: 3px;
     }
 
@@ -635,13 +598,11 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     .modo-legenda {
         font-size: 10px;
-
         letter-spacing: 2.5px;
     }
 
     .botao.modo-cerimonia {
         min-height: 74px;
-
         padding: 15px;
     }
 
@@ -667,6 +628,10 @@ h1 > span:not(.nome):not(.e-comercial) {
     min-height: 100vh;
 
     padding: 35px 18px;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
 }
 
 .conteudo-programacao {
@@ -815,11 +780,6 @@ h1 > span:not(.nome):not(.e-comercial) {
     min-width: 0;
 }
 
-
-/* =========================================
-   MOMENTO DA CERIMÔNIA
-========================================= */
-
 .informacoes-programacao h2 {
     display: inline-block;
 
@@ -843,11 +803,6 @@ h1 > span:not(.nome):not(.e-comercial) {
     text-transform: uppercase;
 }
 
-
-/* =========================================
-   NOME DA MÚSICA
-========================================= */
-
 .informacoes-programacao .musica {
     margin-bottom: 9px;
 
@@ -860,11 +815,6 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     line-height: 1.15;
 }
-
-
-/* =========================================
-   TRECHO DA MÚSICA
-========================================= */
 
 .informacoes-programacao .trecho {
     display: inline-block;
@@ -889,11 +839,6 @@ h1 > span:not(.nome):not(.e-comercial) {
     opacity: 1;
 }
 
-
-/* =========================================
-   MOMENTOS DE DESTAQUE
-========================================= */
-
 .item-programacao.destaque {
     border-color: rgba(182, 144, 82, 0.55);
 
@@ -902,11 +847,6 @@ h1 > span:not(.nome):not(.e-comercial) {
     box-shadow:
         0 4px 15px rgba(0, 0, 0, 0.07);
 }
-
-
-/* =========================================
-   RODAPÉ DA PROGRAMAÇÃO
-========================================= */
 
 .rodape-programacao {
     margin-top: 30px;
@@ -945,7 +885,6 @@ h1 > span:not(.nome):not(.e-comercial) {
 
     .item-programacao {
         gap: 12px;
-
         padding: 15px 12px;
     }
 
@@ -985,22 +924,1077 @@ h1 > span:not(.nome):not(.e-comercial) {
     }
 }
 
+
 /* =========================================
-   TRANSIÇÃO ENTRE TELAS
+   MODO CERIMÔNIA
 ========================================= */
 
-.capa,
-.tela-programacao {
+.tela-cerimonia {
+    display: none;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 18px;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transform: translateY(18px);
+
     transition:
-        opacity 0.45s ease,
-        transform 0.45s ease;
+        opacity 500ms ease,
+        transform 500ms ease;
 }
 
+.conteudo-cerimonia {
+    width: 100%;
+    max-width: 650px;
+
+    min-height: calc(100vh - 36px);
+
+    padding: 25px 30px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(255, 248, 231, 0.95);
+
+    border: 1px solid rgba(182, 144, 82, 0.45);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.18);
+
+    backdrop-filter: blur(5px);
+}
+
+
 /* =========================================
-   ENTRADA INICIAL DA PÁGINA
+   CABEÇALHO — MODO CERIMÔNIA
 ========================================= */
 
-.capa.inicializando {
+.cabecalho-cerimonia {
+    position: relative;
+
+    text-align: center;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid rgba(182, 144, 82, 0.30);
+}
+
+.voltar-cerimonia {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    padding: 5px 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--verde);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.voltar-cerimonia:hover {
+    color: var(--dourado);
+
+    transform: translateX(-3px);
+}
+
+.titulo-cerimonia {
+    color: var(--verde);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+.contador-cerimonia {
+    margin-top: 4px;
+
+    color: var(--dourado);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   MOMENTO ATUAL
+========================================= */
+
+.momento-atual {
+    width: 100%;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 35px 10px;
+
+    gap: 18px;
+}
+
+.identificacao-momento {
+    width: 100%;
+    text-align: center;
+}
+
+.rotulo-agora {
+    margin-bottom: 14px;
+
+    color: var(--dourado);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+.numero-atual {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(182, 144, 82, 0.75);
+
+    color: var(--dourado);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+}
+
+.titulo-momento-atual {
+    margin-bottom: 10px;
+
+    color: var(--verde);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(28px, 5vw, 38px);
+
+    font-weight: 600;
+
+    line-height: 1.15;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+}
+
+.musica-atual {
+    margin-bottom: 18px;
+
+    color: var(--verde);
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 30px;
+}
+
+.trecho-atual {
+    padding: 7px 16px;
+
+    background: rgba(182, 144, 82, 0.12);
+
+    border: 1px solid rgba(182, 144, 82, 0.35);
+
+    color: var(--verde);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   ÁREA DA LETRA
+========================================= */
+
+.area-letra {
+    width: 100%;
+    max-width: 850px;
+
+    height: 42vh;
+    min-height: 280px;
+    max-height: 520px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid rgba(0, 52, 0, 0.18);
+
+    border-radius: 18px;
+
+    background: rgba(255, 248, 231, 0.72);
+
+    overflow: hidden;
+}
+
+.cabecalho-letra {
+    flex-shrink: 0;
+
+    padding: 10px 18px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--verde);
+
+    border-bottom: 1px solid rgba(0, 52, 0, 0.12);
+}
+
+.conteudo-letra {
+    flex: 1;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 24px 30px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    line-height: 1.65;
+
+    color: var(--texto);
+
+    text-align: center;
+
+    scrollbar-width: thin;
+
+    scrollbar-color: var(--dourado) transparent;
+}
+
+.conteudo-letra::-webkit-scrollbar {
+    width: 7px;
+}
+
+.conteudo-letra::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.conteudo-letra::-webkit-scrollbar-thumb {
+    background: var(--dourado);
+
+    border-radius: 10px;
+}
+
+.conteudo-letra::-webkit-scrollbar-thumb:hover {
+    background: var(--verde);
+}
+
+
+/* =========================================
+   PRÓXIMO MOMENTO
+========================================= */
+
+.proximo-momento {
+    padding: 17px 20px;
+
+    background: rgba(0, 52, 0, 0.045);
+
+    border-top: 1px solid rgba(182, 144, 82, 0.25);
+
+    border-bottom: 1px solid rgba(182, 144, 82, 0.25);
+
+    text-align: center;
+}
+
+.rotulo-proximo {
+    margin-bottom: 6px;
+
+    color: var(--dourado);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+.proximo-titulo {
+    margin-bottom: 3px;
+
+    color: var(--verde);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+.proximo-musica {
+    color: var(--verde);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    opacity: 0.78;
+}
+
+
+/* =========================================
+   CONTROLES
+========================================= */
+
+.controles-cerimonia {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.controle-cerimonia {
+    flex: 1;
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 1px solid rgba(182, 144, 82, 0.55);
+
+    background: rgba(255, 248, 231, 0.90);
+
+    color: var(--verde);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.controle-cerimonia:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.10);
+}
+
+.controle-cerimonia span {
+    font-size: 22px;
+    color: var(--dourado);
+}
+
+.controle-proximo {
+    background: var(--verde);
+
+    border-color: var(--dourado);
+
+    color: var(--creme);
+}
+
+.controle-proximo:hover {
+    background: #004700;
+}
+
+.controle-proximo span {
+    color: #d2ad69;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+.rodape-cerimonia {
+    margin-top: 18px;
+
+    text-align: center;
+
+    color: var(--dourado);
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   CONTEÚDO DA LETRA
+========================================= */
+
+.bloco-instrucao {
+    width: 100%;
+
+    margin-bottom: 24px;
+
+    padding: 16px 20px;
+
+    border-left: 3px solid var(--dourado);
+
+    border-radius: 0 10px 10px 0;
+
+    background: rgba(182, 144, 82, 0.08);
+
+    text-align: left;
+}
+
+.rotulo-instrucao {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    color: var(--dourado);
+}
+
+.bloco-instrucao strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: var(--verde);
+}
+
+.bloco-instrucao p {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+
+    line-height: 1.45;
+
+    color: var(--texto);
+}
+
+.bloco-instrucao.destaque {
+    background: rgba(0, 52, 0, 0.06);
+
+    border-left-width: 4px;
+}
+
+
+/* =========================================
+   BLOCO DA MÚSICA
+========================================= */
+
+.bloco-musica {
+    width: 100%;
+
+    text-align: center;
+}
+
+.rotulo-parte {
+    display: block;
+
+    margin: 26px 0 14px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--dourado);
+}
+
+.texto-letra {
+    width: 100%;
+
+    margin-bottom: 26px;
+}
+
+.texto-letra p {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 23px;
+
+    font-weight: 500;
+
+    line-height: 1.65;
+
+    color: var(--texto);
+
+    white-space: normal;
+}
+
+
+/* =========================================
+   TRANSIÇÃO ENTRE MÚSICAS
+========================================= */
+
+.transicao-musical {
+    width: 100%;
+
+    margin: 24px 0 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.etapa-musical {
+    width: 100%;
+
+    padding: 13px 18px;
+
+    border: 1px solid rgba(0, 52, 0, 0.14);
+
+    border-radius: 10px;
+
+    background: rgba(255, 248, 231, 0.65);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.etapa-musical span {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 12px;
+
+    color: var(--dourado);
+}
+
+.etapa-musical strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    color: var(--verde);
+}
+
+.seta-transicao {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    color: var(--dourado);
+}
+
+
+/* =========================================
+   MOMENTO INSTRUMENTAL
+========================================= */
+
+.bloco-instrumental {
+    width: 100%;
+
+    padding: 26px 20px;
+
+    margin-bottom: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    border: 1px solid rgba(182, 144, 82, 0.35);
+
+    border-radius: 14px;
+
+    background: rgba(182, 144, 82, 0.08);
+}
+
+.icone-instrumental {
+    margin-bottom: 8px;
+
+    font-size: 26px;
+
+    color: var(--dourado);
+}
+
+.bloco-instrumental .rotulo-instrucao {
+    margin-bottom: 6px;
+}
+
+.bloco-instrumental strong {
+    font-family: "Parisienne", cursive;
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    color: var(--verde);
+}
+
+.bloco-instrumental p {
+    margin: 8px 0 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    color: var(--texto);
+}
+
+
+/* =========================================
+   TEXTO NÃO INSERIDO
+========================================= */
+
+.letra-indisponivel {
+    margin: 40px 0 !important;
+
+    font-family: "Cormorant Garamond", serif !important;
+
+    font-size: 18px !important;
+
+    font-style: italic;
+
+    color: rgba(38, 51, 38, 0.55) !important;
+}
+
+
+/* =========================================
+   TRANSIÇÃO ENTRE MOMENTOS
+========================================= */
+
+.tela-cerimonia.transicionando-momento
+    .momento-atual,
+.tela-cerimonia.transicionando-momento
+    .proximo-momento,
+.tela-cerimonia.transicionando-momento
+    .controles-cerimonia {
+
     opacity: 0;
-    transform: translateY(10px);
+
+    transform: translateY(5px);
+}
+
+.momento-atual,
+.proximo-momento,
+.controles-cerimonia {
+
+    transition:
+        opacity 180ms ease,
+        transform 180ms ease;
+}
+
+
+/* =========================================
+   MODO CERIMÔNIA — CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .tela-cerimonia {
+        width: 100%;
+
+        min-height: 100vh;
+
+        padding: 8px;
+
+        align-items: stretch;
+
+        justify-content: center;
+    }
+
+    .conteudo-cerimonia {
+        width: 100%;
+
+        max-width: none;
+
+        min-height: calc(100vh - 16px);
+
+        padding: 15px 12px 17px;
+    }
+
+
+    /* Cabeçalho */
+
+    .cabecalho-cerimonia {
+        padding-bottom: 13px;
+    }
+
+    .voltar-cerimonia {
+        position: static;
+
+        display: block;
+
+        width: fit-content;
+
+        margin: 0 auto 9px;
+
+        padding: 3px 0;
+
+        font-size: 13px;
+    }
+
+    .titulo-cerimonia {
+        font-size: 12px;
+
+        letter-spacing: 3px;
+    }
+
+    .contador-cerimonia {
+        margin-top: 3px;
+
+        font-size: 12px;
+    }
+
+
+    /* Momento */
+
+    .momento-atual {
+        width: 100%;
+
+        flex: 1;
+
+        padding: 16px 2px;
+
+        gap: 11px;
+
+        justify-content: center;
+    }
+
+    .rotulo-agora {
+        margin-bottom: 7px;
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+    .titulo-momento-atual {
+        margin-bottom: 5px;
+
+        font-size: 24px;
+
+        line-height: 1.1;
+
+        letter-spacing: 0.8px;
+    }
+
+    .musica-atual {
+        margin-bottom: 7px;
+
+        font-size: 25px;
+    }
+
+    .trecho-atual {
+        padding: 5px 10px;
+
+        font-size: 13px;
+    }
+
+
+    /* Área da letra */
+
+    .area-letra {
+        width: 100%;
+
+        height: 42vh;
+
+        min-height: 240px;
+
+        max-height: 420px;
+
+        border-radius: 14px;
+    }
+
+    .cabecalho-letra {
+        padding: 8px 12px;
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .conteudo-letra {
+        padding: 18px 14px;
+
+        font-size: 19px;
+
+        line-height: 1.6;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    /* Conteúdo das letras */
+
+    .bloco-instrucao {
+        padding: 13px 14px;
+
+        margin-bottom: 18px;
+    }
+
+    .rotulo-instrucao {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .bloco-instrucao strong {
+        font-size: 17px;
+
+        line-height: 1.25;
+    }
+
+    .bloco-instrucao p {
+        font-size: 15px;
+
+        line-height: 1.4;
+    }
+
+    .rotulo-parte {
+        margin: 20px 0 11px;
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .texto-letra {
+        margin-bottom: 20px;
+    }
+
+    .texto-letra p {
+        font-size: 21px;
+
+        line-height: 1.6;
+    }
+
+    .transicao-musical {
+        margin: 20px 0 24px;
+
+        gap: 8px;
+    }
+
+    .etapa-musical {
+        padding: 11px 12px;
+
+        gap: 8px;
+    }
+
+    .etapa-musical strong {
+        font-size: 14px;
+
+        letter-spacing: 1px;
+    }
+
+    .bloco-instrumental {
+        padding: 21px 15px;
+
+        margin-bottom: 20px;
+    }
+
+    .icone-instrumental {
+        font-size: 23px;
+    }
+
+    .bloco-instrumental strong {
+        font-size: 25px;
+    }
+
+    .bloco-instrumental p {
+        font-size: 16px;
+    }
+
+    .letra-indisponivel {
+        margin: 30px 0 !important;
+
+        font-size: 17px !important;
+    }
+
+
+    /* Próximo */
+
+    .proximo-momento {
+        padding: 11px 9px;
+    }
+
+    .rotulo-proximo {
+        margin-bottom: 4px;
+
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .proximo-titulo {
+        margin-bottom: 2px;
+
+        font-size: 15px;
+
+        line-height: 1.15;
+    }
+
+    .proximo-musica {
+        font-size: 14px;
+    }
+
+
+    /* Botões */
+
+    .controles-cerimonia {
+        width: 100%;
+
+        gap: 8px;
+
+        margin-top: 10px;
+    }
+
+    .controle-cerimonia {
+        min-height: 50px;
+
+        padding: 9px 7px;
+
+        gap: 7px;
+
+        font-size: 14px;
+    }
+
+    .controle-cerimonia span {
+        font-size: 19px;
+    }
+
+
+    /* Rodapé */
+
+    .rodape-cerimonia {
+        margin-top: 9px;
+
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================
+   CELULARES MUITO PEQUENOS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .conteudo-cerimonia {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    .titulo-momento-atual {
+        font-size: 22px;
+    }
+
+    .musica-atual {
+        font-size: 23px;
+    }
+
+    .area-letra {
+        height: 40vh;
+        min-height: 220px;
+    }
+
+    .conteudo-letra {
+        padding: 16px 11px;
+    }
+
+    .texto-letra p {
+        font-size: 20px;
+    }
+
+    .controle-cerimonia {
+        font-size: 13px;
+    }
 }

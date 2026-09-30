@@ -47,24 +47,28 @@
                     <!-- PROGRAMÇÃO -->
 
                     <button class="botao" id="btn-programacao">
+
                         <span class="icone">♪</span>
 
                         <span>
                             <strong>Programação</strong>
                             <small>Ordem da cerimônia</small>
                         </span>
+
                     </button>
 
 
                     <!-- PLAYLIST -->
 
                     <button class="botao" id="btn-playlist">
+
                         <span class="icone">♫</span>
 
                         <span>
                             <strong>Playlist de Ensaio</strong>
                             <small>Ouvir as músicas</small>
                         </span>
+
                     </button>
 
 
@@ -76,7 +80,11 @@
                             NO DIA DO CASAMENTO
                         </p>
 
-                        <button class="botao modo-cerimonia" id="btn-cerimonia">
+                        <button
+                            class="botao modo-cerimonia"
+                            id="btn-cerimonia"
+                            type="button"
+                        >
 
                             <span class="icone">♩</span>
 
@@ -110,7 +118,11 @@
 
                 <header class="cabecalho-programacao">
 
-                    <button class="voltar" id="btn-voltar">
+                    <button
+                        class="voltar"
+                        id="btn-voltar"
+                        type="button"
+                    >
                         ← Voltar
                     </button>
 
@@ -442,10 +454,127 @@
 
         </section>
 
+
+        <!-- =========================================
+             MODO CERIMÔNIA
+        ========================================== -->
+
+        <section class="tela-cerimonia" id="tela-cerimonia">
+
+            <div class="conteudo-cerimonia">
+
+                <header class="cabecalho-cerimonia">
+
+                    <button
+                        class="voltar-cerimonia"
+                        id="btn-sair-cerimonia"
+                        type="button"
+                    >
+                        ← Sair do Modo Cerimônia
+                    </button>
+
+                    <p class="titulo-cerimonia">
+                        MODO CERIMÔNIA
+                    </p>
+
+                    <p class="contador-cerimonia">
+                        01 / 11
+                    </p>
+
+                </header>
+
+
+<div class="momento-atual">
+
+    <div class="identificacao-momento">
+
+        <p class="rotulo-agora">
+            AGORA
+        </p>
+
+        <h1 class="titulo-momento-atual">
+            Entrada da Bíblia
+        </h1>
+
+        <p class="musica-atual">
+            Deus Está Aqui
+        </p>
+
+    </div>
+
+
+    <div class="area-letra">
+
+        <div class="cabecalho-letra">
+            LETRA
+        </div>
+
+        <div class="conteudo-letra" id="conteudo-letra">
+
+            <p>
+                A letra da música aparecerá aqui.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+                <section class="proximo-momento">
+
+                    <p class="rotulo-proximo">
+                        PRÓXIMO
+                    </p>
+
+                    <p class="proximo-titulo">
+                        02 — Entrada dos Padrinhos
+                    </p>
+
+                    <p class="proximo-musica">
+                        Me Ama
+                    </p>
+
+                </section>
+
+
+                <nav class="controles-cerimonia">
+
+                    <button
+                        class="controle-cerimonia controle-anterior"
+                        id="btn-anterior"
+                        type="button"
+                    >
+                        <span>←</span>
+                        <strong>Anterior</strong>
+                    </button>
+
+                    <button
+                        class="controle-cerimonia controle-proximo"
+                        id="btn-proximo"
+                        type="button"
+                    >
+                        <strong>Próximo</strong>
+                        <span>→</span>
+                    </button>
+
+                </nav>
+
+
+                <p class="rodape-cerimonia">
+                    Laryssa &amp; José
+                </p>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <script src="script.js"></script>
+
+    <script src="letras.js"></script>
+<script src="script.js"></script>
 
 </body>
-
 </html>
