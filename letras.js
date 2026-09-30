@@ -20,7 +20,7 @@ const letrasCerimonia = {
         <div class="bloco-instrucao">
             <span class="rotulo-instrucao">MOMENTO</span>
             <strong>Entrada da Bíblia</strong>
-            <p>Iniciar no momento indicado pela cerimônia.</p>
+            <p>Iniciar no momento indicado pela cerimonialista.</p>
         </div>
 
         <div class="bloco-musica">
